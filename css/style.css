@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --color-primary: #5cb85f;
+  --color-lightblue: #cfd4ed;
+  --color-bg1: #e5e5e5;
+  --color-bg2: #f1f3ff;
+  --transition: all 400ms ease;
+}
+
+/* ===== global style ===== */
+body {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  background: var(--color-bg1);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  color: black;
+}
+
+h2 {
+  word-wrap: normal;
+  line-height: 1.5rem;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ===== end global style ===== */
+
+/* Nav */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.toggle {
+  display: none;
+  margin: 0 20px;
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-bg2);
+  padding: 18px 0;
+}
+
+.navbar-item {
+  margin: 0 20px;
+}
+
+.navbar-item:last-child {
+  margin-right: 50px;
+}
+
+.navbar-link {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.navbar-link:hover {
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-right: auto;
+}
+
+.navbar-button {
+  border: 1px solid transparent;
+  color: var(--color-bg2);
+  display: inline-block;
+  background: var(--color-primary);
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.8rem;
+  transition: var(--transition);
+}
+
+.navbar-button:hover {
+  color: black;
+  background: transparent;
+  border-color: var(--color-primary);
+}
+
+@media screen and (max-width: 912px) {
+  .navbar-list {
+    flex-wrap: wrap;
+  }
+
+  .toggle {
+    display: block;
+    width: 30px;
+  }
+
+  .navbar-item {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+  }
+  .navbar-item:last-child {
+    margin: 0;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .toggle {
+    width: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 1rem;
+  }
+
+  .toggle {
+    width: 20px;
+  }
+}
+
+/* ===== navbar end ===== */
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.bg-image {
+  background-image: url("../img/1.JPG");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+}
+
+.header__container {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  width: 80%;
+}
+
+.header__title {
+  color: var(--color-bg2);
+}
+
+.header__text {
+  color: var(--color-bg2);
+}
